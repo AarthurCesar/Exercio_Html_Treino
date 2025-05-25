@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+</head> 
 <link rel="stylesheet" href="style.css">
 <body>
     <form action="">
@@ -22,5 +22,20 @@
                 <button type="submit">Entrar</button>
         </main>
     </form>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const email = document.querySelector('input[type="email"]');
+    const senha = document.querySelector('input[type="password"]');
+
+    form.addEventListener("submit", function (event) {
+      if (email.value.trim() === "" || senha.value.trim() === "") {
+        alert("Por favor, preencha todos os campos.");
+        event.preventDefault(); // impede o envio do formulário
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
