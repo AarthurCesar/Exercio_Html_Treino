@@ -1,0 +1,60 @@
+/* Reset básico para evitar conflitos */
+.menu-horizontal, .menu-horizontal ul, .menu-horizontal li, .menu-horizontal a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Estilo principal do menu */
+.menu-horizontal > ul {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.menu-horizontal > ul > li {
+  position: relative;
+  margin: 0 25px;
+}
+
+.menu-horizontal > ul > li > a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 10%;
+  background-color: red;
+  transition: background-color 0.3s;
+}
+
+.menu-horizontal > ul > li:hover > a {
+  background-color: rgb(255, 98, 98);
+}
+
+/* Submenu (inicialmente oculto) */
+.menu-horizontal .submenu {
+  display: none; /* Oculto por padrão */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+/* Mostrar submenu APENAS no hover do li pai */
+.menu-horizontal > ul > li:hover > .submenu {
+  display: block;
+}
+
+/* Estilo dos itens do submenu */
+.menu-horizontal .submenu li a {
+  padding: 10px 15px;
+  color: white;
+  background-color: #444;
+  display: block;
+}
+
+.menu-horizontal .submenu li a:hover {
+  background-color: rgb(255, 98, 98);
+}
