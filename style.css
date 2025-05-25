@@ -32,8 +32,18 @@ form {
 }
 
 button {
-    width: 15%;
+    width: 100%;
     border-radius: 5%;
     height: 4vh;
     cursor: pointer;
+    margin-top: 2vh;
+}
+
+main{
+   background: rgba(240, 240, 240, 0.158);
+   padding: 24vh 12vh;
+}
+
+label{
+    font-size: 3vh;
 }
